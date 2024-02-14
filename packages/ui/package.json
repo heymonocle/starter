@@ -6,7 +6,9 @@
   ],
   "exports": {
     "./styles.css": "./dist/index.css",
-    "./card": "./src/card.tsx"
+    "./card": "./src/card.tsx",
+    "./button": "./src/button.tsx",
+    "./utils": "./src/lib/utils.ts"
   },
   "license": "MIT",
   "scripts": {
@@ -29,5 +31,12 @@
     "tailwindcss": "^3.4.1",
     "tsup": "^8.0.2",
     "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.0",
+    "lucide-react": "^0.330.0",
+    "tailwind-merge": "^2.2.1"
   }
 }
