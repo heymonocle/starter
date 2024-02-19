@@ -1,6 +1,6 @@
 export const getURL = (path = ""): string => {
   let url =
-    process?.env?.NEXT_PUBLIC_VERCEL_URL &&
+    process.env.NEXT_PUBLIC_VERCEL_URL &&
     process.env.NEXT_PUBLIC_VERCEL_URL.trim() !== ""
       ? process.env.NEXT_PUBLIC_VERCEL_URL
       : "http://localhost:3002/";
