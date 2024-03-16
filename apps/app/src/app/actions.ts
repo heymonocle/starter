@@ -5,7 +5,9 @@ import { redirect } from "next/navigation";
 import { createClient } from "../utils/supabase/server";
 import { getURL } from "../utils/helpers";
 
-export const googleAuth = async (): Promise<void> => {
+export const googleAuth = async (
+  action: "sign-up" | "sign-in"
+): Promise<void> => {
   const cookieStore = cookies();
   const supabase = createClient(cookieStore);
 
@@ -16,7 +18,7 @@ export const googleAuth = async (): Promise<void> => {
       scopes: "https://www.googleapis.com/auth/webmasters",
       queryParams: {
         access_type: "offline",
-        prompt: "consent",
+        ...(action === "sign-up" ? { prompt: "consent" } : {}),
       },
     },
   });

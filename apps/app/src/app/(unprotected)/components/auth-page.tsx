@@ -87,7 +87,7 @@ export default function AuthenticationPage({
             <p className="text-sm text-muted-foreground">{subTitle}</p>
           </div>
           <div className="grid gap-6">
-            <form action={googleAuth} className="grid">
+            <form action={googleAuth(action)} className="grid">
               <AuthButton />
             </form>
           </div>
