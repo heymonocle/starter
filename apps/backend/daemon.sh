@@ -1,16 +1,18 @@
 #!/bin/bash
 
-supabase start
+echo "Starting Supabase…"
+supabase status
 
 finish()
 {
+    echo "Stopping Supabase…"
     supabase stop
     sleep 10
-    exit
+    exit 0
 }
 trap finish SIGINT
 
 while :; do
+    echo "Supabase heartbeat…"
     sleep 60
-    echo "Supabase heartbeat..."
 done
