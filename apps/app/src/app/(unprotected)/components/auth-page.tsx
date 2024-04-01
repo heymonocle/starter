@@ -13,6 +13,11 @@ export default function AuthenticationPage({
   title: string;
   subTitle: string | JSX.Element;
 }): JSX.Element {
+  async function create(): Promise<void> {
+    "use server";
+    return googleAuth(action);
+  }
+
   return (
     <div className="container relative h-screen flex-col items-center justify-center grid lg:max-w-none lg:grid-cols-2 lg:px-0">
       <div className="absolute lg:hidden left-6 top-6 z-20 flex items-center text-lg font-medium">
@@ -87,7 +92,7 @@ export default function AuthenticationPage({
             <p className="text-sm text-muted-foreground">{subTitle}</p>
           </div>
           <div className="grid gap-6">
-            <form action={googleAuth(action)} className="grid">
+            <form action={create} className="grid">
               <AuthButton />
             </form>
           </div>

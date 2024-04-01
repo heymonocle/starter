@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "daemon.js"
+    "dev": "./daemon.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "supabase": "^1.148.6"
+    "supabase": "^1.165.0"
+  },
+  "volta": {
+    "node": "20.12.0"
   }
 }
