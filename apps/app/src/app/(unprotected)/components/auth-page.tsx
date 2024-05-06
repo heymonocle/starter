@@ -1,20 +1,20 @@
-import Link from "next/link";
-import { cn } from "@repo/ui/utils";
-import { buttonVariants } from "@repo/ui/button";
-import { googleAuth } from "../../actions";
-import { AuthButton } from "./auth-button";
+import Link from 'next/link';
+import { cn } from '@repo/ui/utils';
+import { buttonVariants } from '@repo/ui/button';
+import { googleAuth } from '../../actions';
+import { AuthButton } from './auth-button';
 
 export default function AuthenticationPage({
   action,
   title,
   subTitle,
 }: {
-  action: "sign-up" | "sign-in";
+  action: 'sign-up' | 'sign-in';
   title: string;
   subTitle: string | JSX.Element;
 }): JSX.Element {
   async function create(): Promise<void> {
-    "use server";
+    'use server';
     return googleAuth(action);
   }
 
@@ -35,11 +35,11 @@ export default function AuthenticationPage({
         </svg>
         Acme Inc
       </div>
-      {action === "sign-up" ? (
+      {action === 'sign-up' ? (
         <Link
           className={cn(
-            buttonVariants({ variant: "ghost" }),
-            "absolute right-4 top-4 lg:right-8 lg:top-8"
+            buttonVariants({ variant: 'ghost' }),
+            'absolute right-4 top-4 lg:right-8 lg:top-8',
           )}
           href="/sign-in"
         >
@@ -48,8 +48,8 @@ export default function AuthenticationPage({
       ) : (
         <Link
           className={cn(
-            buttonVariants({ variant: "ghost" }),
-            "absolute right-4 top-4 lg:right-8 lg:top-8"
+            buttonVariants({ variant: 'ghost' }),
+            'absolute right-4 top-4 lg:right-8 lg:top-8',
           )}
           href="/sign-up"
         >
@@ -97,14 +97,14 @@ export default function AuthenticationPage({
             </form>
           </div>
           <p className="px-8 text-center text-sm text-muted-foreground">
-            By continuing, you agree to our{" "}
+            By continuing, you agree to our{' '}
             <Link
               className="underline underline-offset-4 hover:text-primary"
               href="/terms-of-service"
             >
               Terms of Service
-            </Link>{" "}
-            and{" "}
+            </Link>{' '}
+            and{' '}
             <Link
               className="underline underline-offset-4 hover:text-primary"
               href="/privacy-policy"

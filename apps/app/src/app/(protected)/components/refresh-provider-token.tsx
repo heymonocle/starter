@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
-import { createClient } from "../../../utils/supabase/client";
+import { useEffect } from 'react';
+import { createClient } from '../../../utils/supabase/client';
 
 const supabase = createClient();
 
@@ -10,8 +10,8 @@ function RefreshProviderToken(): null {
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange(async (event) => {
-      if (["INITIAL_SESSION", "TOKEN_REFRESHED"].includes(event)) {
-        await fetch("/auth/refresh");
+      if (['INITIAL_SESSION', 'TOKEN_REFRESHED'].includes(event)) {
+        await fetch('/auth/refresh');
       }
     });
 

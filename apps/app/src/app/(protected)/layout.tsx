@@ -1,7 +1,7 @@
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
-import { createClient } from "../../utils/supabase/server";
-import RefreshProviderToken from "./components/refresh-provider-token";
+import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
+import { createClient } from '../../utils/supabase/server';
+import RefreshProviderToken from './components/refresh-provider-token';
 
 export default async function RootLayout({
   children,
@@ -16,7 +16,7 @@ export default async function RootLayout({
   } = await supabase.auth.getUser();
 
   if (!user) {
-    redirect("/sign-in");
+    redirect('/sign-in');
   }
 
   return (

@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Button } from "@repo/ui/button";
-import { Icons } from "../../components/icons";
+import { useState } from 'react';
+import { Button } from '@repo/ui/button';
+import { Icons } from '../../components/icons';
 
 export function AuthButton(): JSX.Element {
   const [pending, setPending] = useState<boolean>(false);

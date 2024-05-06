@@ -1,6 +1,6 @@
-import { cookies } from "next/headers";
-import { redirect } from "next/navigation";
-import { createClient } from "../../utils/supabase/server";
+import { cookies } from 'next/headers';
+import { redirect } from 'next/navigation';
+import { createClient } from '../../utils/supabase/server';
 
 export default async function RootLayout({
   children,
@@ -15,7 +15,7 @@ export default async function RootLayout({
   } = await supabase.auth.getUser();
 
   if (user) {
-    redirect("/");
+    redirect('/');
   }
 
   return <>{children}</>;

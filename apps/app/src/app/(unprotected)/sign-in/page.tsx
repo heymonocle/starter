@@ -1,9 +1,9 @@
-import type { Metadata } from "next";
-import Link from "next/link";
-import AuthenticationPage from "../components/auth-page";
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import AuthenticationPage from '../components/auth-page';
 
 export const metadata: Metadata = {
-  title: "Sign In",
+  title: 'Sign In',
 };
 
 export default function Page(): JSX.Element {
@@ -12,13 +12,13 @@ export default function Page(): JSX.Element {
       action="sign-in"
       subTitle={
         <>
-          Or{" "}
+          Or{' '}
           <Link
             className="underline underline-offset-4 hover:text-primary"
             href="/sign-up"
           >
             sign up
-          </Link>{" "}
+          </Link>{' '}
           to get started
         </>
       }
