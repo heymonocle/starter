@@ -23,12 +23,18 @@ importers:
       prettier-plugin-tailwindcss:
         specifier: ^0.5.14
         version: 0.5.14(prettier@3.2.5)
+      supabase:
+        specifier: ^1.165.0
+        version: 1.165.0
       turbo:
         specifier: ^1.13.3
         version: 1.13.3
 
   apps/app:
     dependencies:
+      '@repo/types':
+        specifier: workspace:*
+        version: link:../../packages/types
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -214,6 +220,8 @@ importers:
       tailwindcss-animate:
         specifier: ^1.0.7
         version: 1.0.7(tailwindcss@3.4.3)
+
+  packages/types: {}
 
   packages/ui:
     dependencies:
