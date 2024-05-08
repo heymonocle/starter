@@ -1,6 +1,7 @@
 {
   "name": "@repo/ui",
   "version": "0.0.0",
+  "license": "MIT",
   "sideEffects": [
     "**/*.css"
   ],
@@ -10,15 +11,18 @@
     "./button": "./src/button.tsx",
     "./utils": "./src/lib/utils.ts"
   },
-  "license": "MIT",
   "scripts": {
     "build": "tailwindcss -i ./src/styles.css -o dist/index.css",
-    "lint": "eslint src/",
     "dev": "tailwindcss -i ./src/styles.css -o ./dist/index.css --watch",
+    "lint": "eslint src/",
     "type-check": "tsc --noEmit"
   },
-  "peerDependencies": {
-    "react": "^18.2.0"
+  "dependencies": {
+    "@radix-ui/react-slot": "^1.0.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.378.0",
+    "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
@@ -33,12 +37,8 @@
     "tsup": "^8.0.2",
     "typescript": "^5.4.5"
   },
-  "dependencies": {
-    "@radix-ui/react-slot": "^1.0.2",
-    "class-variance-authority": "^0.7.0",
-    "clsx": "^2.1.1",
-    "lucide-react": "^0.378.0",
-    "tailwind-merge": "^2.3.0"
+  "peerDependencies": {
+    "react": "^18.2.0"
   },
   "volta": {
     "node": "20.12.0"

@@ -3,10 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "license": "MIT",
-  "publishConfig": {
-    "access": "public"
-  },
   "volta": {
     "node": "20.12.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
