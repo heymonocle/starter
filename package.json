@@ -28,9 +28,9 @@
     "@repo/typescript-config": "workspace:*",
     "@vercel/style-guide": "^6.0.0",
     "eslint": "^8.57.0",
-    "prettier": "^3.2.5",
-    "prettier-plugin-tailwindcss": "^0.5.14",
-    "supabase": "^1.165.0",
+    "prettier": "^3.3.0",
+    "prettier-plugin-tailwindcss": "^0.6.1",
+    "supabase": "^1.172.2",
     "turbo": "^1.13.3"
   },
   "packageManager": "pnpm@9.0.6",
